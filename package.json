@@ -1,10 +1,10 @@
 {
   "name": "black-kit",
-  "description": "Bootstrap 4 Black Design",
+  "description": "Web pages for Holoprint.online",
   "version": "1.0.1",
-  "homepage": "http://creative-tim.com/product/blk-design-system",
-  "author": "Creative Tim",
-  "license": "Creative Tim License <www.creative-tim.com/license>",
+  "homepage": "http://holoprint.online",
+  "author": "Holoprint",
+  "license": "https://github.com/HoloPrint/holoprint.github.io/blob/main/LICENSE",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.1.0",
