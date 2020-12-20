@@ -10,7 +10,6 @@ var firebaseConfig = {
 	measurementId: "G-JL30S2DLXP"
 };
 firebase.initializeApp(firebaseConfig);
-firebase.analytics();
 
 // Menampilkan data dalam bentuk tabel
 function tampilData() {
