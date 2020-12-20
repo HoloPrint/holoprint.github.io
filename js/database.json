@@ -1,0 +1,71 @@
+{
+  "status-Bahan" : 
+  [ 
+    {
+      "id" : 0,
+      "kode_supplier" : "1",
+      "nama_bahan" : "Foil Silver",
+      "jenis" : "Bahan Habis Pakai",
+      "stock" : 2
+    }, 
+    {
+      "id" : 1,
+      "kode_supplier" : "1",
+      "nama_bahan" : "Foil Gold",
+      "jenis" : "Bahan Habis Pakai",
+      "stock" : 4
+    }, 
+    {
+      "id" : 2,
+      "kode_supplier" : "3",
+      "nama_bahan" : "Komputer",
+      "jenis" : "Alat",
+      "stock" : 2
+    },
+    {
+      "id" : 3,
+      "kode_supplier" : "1",
+      "nama_bahan" : "Foil Gold",
+      "jenis" : "Bahan Habis Pakai",
+      "stock" : 4
+    }
+  ],
+  "status-Pesanan" : 
+  [ 
+    {
+      "id" : 0,
+      "nama_pemesan" : "Sandi Pratama",
+      "alamat" : "Bandung",
+      "kontak" : "Sandi@holoprint.com",
+      "file" : "drive.google.com",
+      "varian" : 2,
+      "jumlah" : 2,
+      "nominal" : null
+    },
+    {
+      "id" : 1,
+      "nama_pemesan" : "Viera Veranda Vie",
+      "alamat" : "Bandung",
+      "kontak" : "Vie@marina.studio",
+      "file" : "drive.google.com",
+      "varian" : 1,
+      "jumlah" : 1,
+      "nominal" : null
+    }
+  ],
+  "status-Supplier" : 
+  [ 
+    {
+      "id" : 0,
+      "nama_supplier" : "Sulaiman Saleh",
+      "alamat" : "Bandung",
+      "kontak" : "inii.man@gmail.com"
+    },
+    {
+      "id" : 1,
+      "nama_pemesan" : "Fikri Rahmat Neu",
+      "alamat" : "Cimahi",
+      "kontak" : "Fikri.Rahmat@widyatama.ac.id"
+    }
+  ]
+}
