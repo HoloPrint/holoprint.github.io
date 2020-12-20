@@ -1,11 +1,93 @@
-<!-- Place <div> tag where you want the feed to appear -->
-    <div id="curator-feed-default-feed-layout"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a></div>
-    <!-- The Javascript can be moved to the end of the html page before the </body> tag -->
-    <script type="text/javascript">
-    /* curator-feed-default-feed-layout */
-    (function(){
-    var i, e, d = document, s = "script";i = d.createElement("script");i.async = 1;
-    i.src = "https://cdn.curator.io/published/1a0ae10a-92ca-4733-a7e0-fc4cb30c38e6.js";
-    e = d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
-    })();
+<html>
+    <head>
+        <script src="js/firebase.js"></script>
+	<script src="js/jquery-3.2.1.slim.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+	<link href="assets/css/styles.css" rel="stylesheet" />
+	<link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"
+		crossorigin="anonymous" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous">
     </script>
+    </head>
+    <body>
+
+        <div class="col-auto align-self-center" style="padding:6px;"><button class="btn btn-success"
+            type="button" id="tambah_data" style="margin-left:10px;" data-toggle="modal"
+            data-target="#ModalAdd" onclick="ambilDataTerakhir()">Tambah Data</button></div>
+
+
+        		<!-- Backend -->
+        <script src="js/db_pesanan.js"></script>
+
+        <!-- Modal Add -->
+		<div class="modal fade" id="ModalAdd" tabindex="-1" role="dialog" aria-labelledby="ModalAddLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalUpdateLabel">Tambah Data Data</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h6>ID : </h6>
+                    <input class="form-control" type="text" id="T4_add"></br>
+                    <h6>Nama : </h6>
+                    <input class="form-control" type="text" id="t4_nama_pemesan_add"></br>
+                    <h6>Alamat: </h6>
+                    <input class="form-control" type="text" id="t4_alamat_add"></br>
+                    <h6>Kontak : </h6>
+                    <input class="form-control" type="text" id="t4_kontak_add"></br>
+                    <h6>File : </h6>
+                    <input class="form-control" type="text" id="t4_file_add"></br>
+                    <h6>Varian : </h6>
+                    <input class="form-control" type="text" id="t4_varian_add"></br>
+                    <h6>Jumlah : </h6>
+                    <input class="form-control" type="text" id="t4_jumlah_add"></br>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                    <button type="button" class="btn btn-primary"
+                        onclick="addData_Proses(); bayar()">Simpan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Bayar -->
+		<div class="modal fade" id="ModalBayar" tabindex="-1" role="dialog" aria-labelledby="ModalDelLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalUpdateLabel">Konfirmasi Pembayaran</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h6>Nominal Pembayaran yang perlu anda bayar adalah</h6>
+                    <input class="form-control" type="text" id="t4_byr" readonly></br>
+                    <h6>Card Number : </h6>
+                    <input class="form-control" type="text" id="T4_CNM"></br>
+                    <h6>Expired on : </h6>
+                    <input class="form-control" type="text" id="T4_EXP"></br>
+                    <h6>CVC : </h6>
+                    <input class="form-control" type="text" id="T4_CVC"></br>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Bayar</button>
+                    <!-- <button id="ttp_modal" type="button" class="btn btn-danger">Bayar</button>
+                    <script type="text/javascript">
+                        $('#ttp_emodal').modal('hide');
+                    </script> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+</html>
